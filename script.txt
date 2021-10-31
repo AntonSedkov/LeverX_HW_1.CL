@@ -7,7 +7,7 @@ jar cvfme greets.jar MANIFEST.MF by.anthony.Main -C .\bin\ . .\lib\ .\README.md
 #Run app (.jar)
 java -jar .\greets.jar "Nike Mice" "5"
 #Disassemble the code
-javap -c -classpath .\greetings.jar by.anthony.model.AppItem
+javap -c -classpath .\greets.jar by.anthony.model.AppItem
 
 ---
 javac -verbose -sourcepath .\src -classpath .\lib\commons-lang3-3.12.0.jar -d .\bin .\src\by\anthony\Main.java
@@ -22,5 +22,5 @@ java -jar .\greets.jar
 java -jar .\greets.jar John 50
 java -jar .\greets.jar "Petr Ivanov" "33"
 
-javap -c -classpath .\greetings.jar by.anthony.model.AppItem
-javap -c -classpath .\greetings.jar by.anthony.model.Main
+javap -c -classpath .\greets.jar by.anthony.model.AppItem
+javap -c -classpath .\greets.jar by.anthony.model.Main
