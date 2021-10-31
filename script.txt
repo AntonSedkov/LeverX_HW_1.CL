@@ -1,0 +1,26 @@
+#Compile .class-files
+javac -sourcepath .\src -classpath .\lib\* -d .\bin .\src\by\anthony\Main.java
+#Run app (.classes)
+java -classpath ".\bin;.\lib\*" by.anthony.Main "Petr Ivanov" 33
+#Make .jar-file
+jar cvfme greets.jar MANIFEST.MF by.anthony.Main -C .\bin\ . .\lib\ .\README.md
+#Run app (.jar)
+java -jar .\greets.jar "Nike Mice" "5"
+#Disassemble the code
+javap -c -classpath .\greetings.jar by.anthony.model.AppItem
+
+---
+javac -verbose -sourcepath .\src -classpath .\lib\commons-lang3-3.12.0.jar -d .\bin .\src\by\anthony\Main.java
+
+java -classpath ".\bin;.\lib\*" by.anthony.Main
+java -classpath ".\bin;.\lib\*" by.anthony.Main John 50
+java -classpath ".\bin;.\lib\*" by.anthony.Main "Petr Ivanov" "33"
+
+jar --create --verbose --file greets.jar --manifest MANIFEST.MF --main-class by.anthony.Main -C bin\ . lib\ README.md
+
+java -jar .\greets.jar
+java -jar .\greets.jar John 50
+java -jar .\greets.jar "Petr Ivanov" "33"
+
+javap -c -classpath .\greetings.jar by.anthony.model.AppItem
+javap -c -classpath .\greetings.jar by.anthony.model.Main
